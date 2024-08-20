@@ -1,0 +1,31 @@
+{
+  "name": "beagle-parse",
+  "version": "1.0.0",
+  "description": "parse csv data exported from beagle explorer and enrich duml data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx @biomejs/biome check --write ./src",
+    "format": "npx @biomejs/biome format --write package.json tsconfig.json ./src",
+    "build": "tsc -p .",
+    "parse": "ts-node dist/parse.js"
+  },
+  "type": "module",
+  "author": "Tim Strazzere <diff@protonmail.com>",
+  "keywords": [
+    "duml",
+    "drone",
+    "dji",
+    "beagle"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "duml-packet": "^2.0.2"
+  }
+}
